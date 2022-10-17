@@ -1,5 +1,5 @@
 <h1 align="center">
-  NodeJS / TypeScript NPM Package Library Starter Kit 
+  NodeJS / TypeScript Server Starter Kit 
 </h1>
 
 > Basic starter kit to create an App using `npx gts init` and most of the best packges or tools for dates, fetching, tests, coverage, linting, formatting and more.
@@ -7,6 +7,10 @@
 ## About GTS
 
 GTS is Google's TypeScript style guide, and the configuration for our formatter, linter, and automatic code fixer. No lint rules to edit, no configuration to update, and no more bikeshedding over syntax.
+
+To add webhooks features please add the following command:
+
+`npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"`
 
 ## Table of Contents
 
