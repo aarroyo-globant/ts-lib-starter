@@ -152,4 +152,4 @@ Fo reference to our best practices, please see: https://llplus.atlassian.net/wik
 - [RxJs](https://rxjs.dev/) A practical Reactive Extensions Library for JavaScript/TypeScript.
 - [Inversify](https://inversify.io/) A powerful and lightweight inversion of control container.
 - [Automapper](https://automapperts.netlify.app/) An object-object mapping solution by convention in TypeScript
-- [release-it] (https://github.com/release-it/release-it) Generic CLI tool to automate versioning and package publishing
+- [release-it](https://github.com/release-it/release-it) Generic CLI tool to automate versioning and package publishing
