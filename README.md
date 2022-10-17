@@ -1,5 +1,5 @@
 <h1 align="center">
-  NodeJS / TypeScript Server Starter Kit 
+  NodeJS / TypeScript NPM Package Library Starter Kit 
 </h1>
 
 > Basic starter kit to create an App using `npx gts init` and most of the best packges or tools for dates, fetching, tests, coverage, linting, formatting and more.
@@ -10,7 +10,7 @@ GTS is Google's TypeScript style guide, and the configuration for our formatter,
 
 To add webhooks features please add the following command:
 
-`npx husky add .husky/commit-msg  "npx --no -- commitlint --edit ${1}"`
+`npx husky add .husky/commit-msg "npx --no -- commitlint --edit ${1}"`
 
 ## Table of Contents
 
@@ -27,6 +27,7 @@ To add webhooks features please add the following command:
   - [`npm run build`](#npm-run-build)
   - [`npm run eject`](#npm-run-eject)
   - [`npm run lint`](#npm-run-lint)
+  - [`npm run release`](#npm-run-release)
 - [File Structure](#file-structure)
 - [Conventions](#conventions)
   - [Organization / Best practices](#organization--best-practices)
@@ -48,6 +49,7 @@ So basically, what you have here is a nodejs starter project created with `npx g
 - Datetime library (moment).
 - Solid and recommended file structure.
 - Configuration files.
+- Release-it for generic CLI tool to automate versioning and package publishing
 
 So feel free to fork, propose new features and tools. We will be checking constantly PRs and merging the best features.
 
@@ -105,29 +107,23 @@ Builds the app for production to the `build` folder.<br>
 
 Lints all the files inside `./src` and shows the result without fixing.
 
+### `npm run release`
+
+Compile and execute a wizard for release a new version, fix, update for NPM modules.
+
 ## File Structure
 
 Folder structure is based on productivity:
 
 ```text
 src
-├── application             * Application Layer (dto, services, adapters, etc).
+├── impl                    * Concret clasess, contract/interfaces implementations.
 │   └── ...
-├── assets                  * Assets that are imported into your components(images, custom svg, etc).
-│   └── ...
-├── config                  * Config files (bootstrapper, etc.)
-│   └── ...
-├── core                    * Core interfaces and implementations for the app.
-│   └── interfaces          * Contracts, interfaces.
-│   └── impl                * Implementations or concret classes
-├── domain                  * Domain Layer (model objects, aggregate, entities, value objects, etc).
-│   └── ...
-├── infrastructure          * Infrastructure Layer (database, service bus, etc).
-│   └── ...
-├── models                  * Common data models, constants, etc.
-│   └── ...
-├── shared                  * Common code (utils, providers, builders, etc.)
-│   └── ...
+├── interfaces              * Interfaces and contracts for the app.
+├── Shared                    * Common code (utils, providers, builders, etc.)
+│   └── ...assets                  * Assets that are imported into your components(images, custom svg, etc).
+│   └── ...config                  * Config files (bootstrapper, etc.)
+│   └── ...models                  * Common data models, constants, etc.
 ├── index.ts                * Main execution point.
 ```
 
@@ -156,3 +152,4 @@ Fo reference to our best practices, please see: https://llplus.atlassian.net/wik
 - [RxJs](https://rxjs.dev/) A practical Reactive Extensions Library for JavaScript/TypeScript.
 - [Inversify](https://inversify.io/) A powerful and lightweight inversion of control container.
 - [Automapper](https://automapperts.netlify.app/) An object-object mapping solution by convention in TypeScript
+- [release-it] (https://github.com/release-it/release-it) Generic CLI tool to automate versioning and package publishing
